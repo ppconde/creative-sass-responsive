@@ -1,0 +1,22 @@
+.imggrid{
+    margin-top: $gridgutter * 4;
+}
+#clients{
+    margin-top: $gridgutter * 4;
+    h2{
+        font-size: $gridgutter * 3;
+        margin: 0;
+    }
+    .clientslist{
+        margin-top: $gridgutter * 2;
+        img{
+            @extend .animate;
+            box-sizing: border-box;
+            padding: $gridgutter / 2;
+            opacity: 0.4;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "ex1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass ./scss/styles.scss ./css/styles.css",
+    "watch": "sass --watch ./scss/styles.scss ./css/styles.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.14.3"
+  },
+  "devDependencies": {},
+  "description": ""
+}

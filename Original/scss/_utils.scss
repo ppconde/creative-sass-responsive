@@ -1,0 +1,42 @@
+.animate{
+    -webkit-transition: all $animationtime ease;
+    -moz-transition: all $animationtime ease;
+    -ms-transition: all $animationtime ease;
+    -o-transition: all $animationtime ease;
+    transition: all $animationtime ease;
+}
+
+.textleft{
+    text-align: left;
+}
+.textcenter{
+    text-align: center;
+}
+.textright{
+    text-align: right;
+}
+
+.primary{
+    color: $primary;
+}
+.secondary{
+    color: $secondary;
+}
+.graydark{
+    color: $graydark;
+}
+.gray{
+    color: $gray;
+}
+.graylight{
+    color: $graylight;
+}
+.white{
+    color: $white;
+}
+
+.imgfit{
+    display: block;
+    width: 100%;
+    height: auto;
+}

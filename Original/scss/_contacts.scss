@@ -1,0 +1,59 @@
+#contacts{
+    margin-top: $gridgutter * 3;
+    background-color: $graylight;
+    display: flex;
+    > .col6{
+        &.formcontainer{
+            padding-right: $gridgutter / 2;
+            .form{
+                display: block;
+                float: right;
+                width: $gridwidth / 2 - $gridgutter;
+                padding-bottom: $gridgutter * 2;
+                form{
+                    h2{
+                        font-size: 72px;
+                        margin: $gridgutter * 3 0 0;
+                    }
+                    p{
+                        @extend .graydark;
+                        margin: $gridgutter * 1.5 0;
+                    }
+                    input, textarea{
+                        @extend .graydark;
+                        @extend .animate;
+                        box-sizing: border-box;
+                        margin: 0 0 $gridgutter / 3 * 2;
+                        border:$formborderwidth solid $gray;
+                        width: 100%;
+                        line-height: $formlineheight;
+                        padding: ((64 - $formlineheight) / 2 - ($formborderwidth * 2)) $gridgutter / 2;
+                        &:focus{
+                            border-color: $secondary;
+                        }
+                    }
+                    button{
+                        @extend .white;
+                        @extend .animate;
+                        margin: 0 0 $gridgutter / 3 * 2;
+                        background-color: $primary;
+                        text-transform: uppercase;
+                        line-height: $formlineheight;
+                        padding: ((64 - $formlineheight) / 2 - ($formborderwidth * 2)) $gridgutter;
+                        border: none;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: $secondary;
+                        }
+                    }
+                }
+            }
+        }
+        &#map{
+            background-image: url(../imgs/map.JPG);
+            background-size: cover;
+            background-position: right top;
+            background-repeat: no-repeat;
+        }
+    }
+}

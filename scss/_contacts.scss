@@ -1,0 +1,112 @@
+#contacts {
+  @each $screenName, $screenSize in $gridcolumns {
+    @include dynamicMQuery($gridwidth, $screenName) {
+      margin-top: map-get($gridgutter, $screenName) * 3;
+    }
+  }
+  background-color: $graylight;
+  display: flex;
+  > .col-desktop-6 {
+    &.formcontainer {
+      @each $screenName, $screenSize in $gridcolumns {
+        @if $screenName == "desktop" {
+          @include dynamicMQuery($gridwidth, "desktop") {
+            padding-right: map-get($gridgutter, "desktop") / 2;
+            margin: 0;
+          }
+        } @else {
+          margin: 0 30px 0 30px;
+        }
+      }
+
+      .form {
+        display: block;
+
+        @include dynamicMQuery($gridwidth, "desktop") {
+          float: right;
+          width: map-get($gridwidth, "desktop") / 2 -
+            map-get($gridgutter, "desktop");
+        }
+        @each $screenName, $screenSize in $gridcolumns {
+          @include dynamicMQuery($gridwidth, $screenName) {
+            padding-bottom: map-get($gridgutter, $screenName) * 2;
+          }
+        }
+
+        form {
+          h2 {
+            font-size: 72px;
+            @each $screenName, $screenSize in $gridcolumns {
+              @include dynamicMQuery($gridwidth, $screenName) {
+                margin: map-get($gridgutter, $screenName) * 3 0 0;
+              }
+            }
+          }
+          p {
+            @extend .graydark;
+            @each $screenName, $screenSize in $gridcolumns {
+              @include dynamicMQuery($gridwidth, $screenName) {
+                margin: map-get($gridgutter, $screenName) * 1.5 0;
+              }
+            }
+            @include dynamicMQuery($gridwidth, "mobile") {
+              text-align: center;
+            }
+          }
+          input,
+          textarea {
+            @extend .graydark;
+            @extend .animate;
+            box-sizing: border-box;
+            margin: 0 0 map-get($gridgutter, "desktop") / 3 * 2;
+            border: $formborderwidth solid $gray;
+            width: 100%;
+            line-height: $formlineheight;
+            padding: ((64 - $formlineheight) / 2 - ($formborderwidth * 2))
+              map-get($gridgutter, "desktop") / 2;
+
+            &:focus {
+              border-color: $secondary;
+            }
+          }
+          button {
+            @extend .white;
+            @extend .animate;
+            margin: 0 0 map-get($gridgutter, "desktop") / 3 * 2;
+            background-color: $primary;
+            text-transform: uppercase;
+            line-height: $formlineheight;
+            padding: ((64 - $formlineheight) / 2 - ($formborderwidth * 2))
+              map-get($gridgutter, "desktop");
+            border: none;
+            cursor: pointer;
+            &:hover {
+              background-color: $secondary;
+            }
+            @include dynamicMQuery($gridwidth, "mobile") {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    &#map {
+      background-image: url(../imgs/map.JPG);
+      background-size: cover;
+      background-position: right top;
+      background-repeat: no-repeat;
+
+      @include dynamicMQuery($gridwidth, "mobile") {
+        height: 200px;
+      }
+
+      @include dynamicMQuery($gridwidth, "tablet") {
+        height: 300px;
+      }
+
+      @include dynamicMQuery($gridwidth, "desktop") {
+        height: unset;
+      }
+    }
+  }
+}

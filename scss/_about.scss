@@ -1,0 +1,57 @@
+.aboutline1 {
+  margin-top: map-get($gridgutter, "desktop") * 4;
+  position: relative;
+  z-index: 2;
+  h4 {
+    font-size: 36px;
+    margin: 0;
+    .iczarrow {
+      font-size: 28px;
+    }
+  }
+}
+.aboutline2 {
+  position: relative;
+  z-index: 1;
+  @each $screenName, $screenSize in $gridcolumns {
+    @include dynamicMQuery($gridwidth, $screenName) {
+      $tempValue: map-get($gridgutter, $screenName) *
+        map-get($aboutLine2Constant, $screenName);
+      top: calc(#{$neg} * #{$tempValue});
+      @if $screenName == "desktop" {
+        margin-bottom: -240px;
+      }
+    }
+  }
+}
+#services {
+  h2 {
+    @each $screenName, $screenSize in $gridcolumns {
+      @include dynamicMQuery($gridwidth, $screenName) {
+        font-size: map-get($gridgutter, $screenName) * 3;
+        @if $screenName == "desktop" {
+          margin: map-get($servicesMargin, $screenName);
+        } @else {
+          margin: map-get($servicesMargin, $screenName) 0 0 0;
+        }
+      }
+    }
+  }
+  .serviceslist {
+    @each $screenName, $screenSize in $gridcolumns {
+      @include dynamicMQuery($gridwidth, $screenName) {
+        margin-top: map-get($gridgutter, $screenName) * 3;
+      }
+    }
+    .iconz {
+      @extend .secondary;
+      font-size: 64px;
+    }
+    h3 {
+      font-size: 24px;
+    }
+    p {
+      @extend .graydark;
+    }
+  }
+}

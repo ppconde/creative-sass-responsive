@@ -1,0 +1,42 @@
+.imggrid {
+  @each $screenName, $screenSize in $gridcolumns {
+    @include dynamicMQuery($gridwidth, $screenName) {
+      margin-top: map-get($gridgutter, $screenName) * 4;
+    }
+  }
+}
+#clients {
+  @each $screenName, $screenSize in $gridcolumns {
+    @include dynamicMQuery($gridwidth, $screenName) {
+      margin-top: map-get($gridgutter, $screenName) * 4;
+    }
+  }
+  h2 {
+    @each $screenName, $screenSize in $gridcolumns {
+      @include dynamicMQuery($gridwidth, $screenName) {
+        font-size: map-get($gridgutter, $screenName) * 3;
+      }
+    }
+    margin: 0;
+  }
+  .clientslist {
+    @each $screenName, $screenSize in $gridcolumns {
+      @include dynamicMQuery($gridwidth, $screenName) {
+        margin-top: map-get($gridgutter, $screenName) * 2;
+      }
+    }
+    img {
+      @extend .animate;
+      box-sizing: border-box;
+      @each $screenName, $screenSize in $gridcolumns {
+        @include dynamicMQuery($gridwidth, $screenName) {
+          padding: map-get($gridgutter, $screenName) / 2;
+        }
+      }
+      opacity: 0.4;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

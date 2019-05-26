@@ -1,0 +1,19 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'whoami' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 verbose stack Error: this command requires you to be logged in.
+4 verbose stack     at EventEmitter.whoami (/usr/share/npm/lib/whoami.js:41:18)
+4 verbose stack     at Object.commandCache.(anonymous function) (/usr/share/npm/lib/npm.js:216:13)
+4 verbose stack     at EventEmitter.<anonymous> (/usr/share/npm/bin/npm-cli.js:74:30)
+4 verbose stack     at _combinedTickCallback (internal/process/next_tick.js:131:7)
+4 verbose stack     at process._tickCallback (internal/process/next_tick.js:180:9)
+5 verbose cwd /mnt/c/Users/pepco/OneDrive/EDIT - Disruptive Digital Education/3 Responsive/Ex2
+6 error Linux 4.4.0-17134-Microsoft
+7 error argv "/usr/bin/node" "/usr/bin/npm" "whoami"
+8 error node v8.10.0
+9 error npm  v3.5.2
+10 error code ENEEDAUTH
+11 error need auth this command requires you to be logged in.
+12 error need auth You need to authorize this machine using `npm adduser`
+13 verbose exit [ 1, true ]

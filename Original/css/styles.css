@@ -1,0 +1,740 @@
+@charset "UTF-8";
+/* ******* EXERCÍCIO DESKTOP ******* */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700|Muli:400);
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+@font-face {
+  font-family: "iconz";
+  src: url("../fonts/iconz.eot?6to4jc");
+  src: url("../fonts/iconz.eot?6to4jc#iefix") format("embedded-opentype"), url("../fonts/iconz.ttf?6to4jc") format("truetype"), url("../fonts/iconz.woff?6to4jc") format("woff"), url("../fonts/iconz.svg?6to4jc#iconz") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icz"], [class*=" icz"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "iconz" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iczarrow:before {
+  content: "";
+}
+
+.iczbehance:before {
+  content: "";
+}
+
+.iczdev:before {
+  content: "";
+}
+
+.iczdribbble:before {
+  content: "";
+}
+
+.iczfacebook:before {
+  content: "";
+}
+
+.iczinstagram:before {
+  content: "";
+}
+
+.iczmkt:before {
+  content: "";
+}
+
+.icztwitter:before {
+  content: "";
+}
+
+.iczhamburger:before {
+  content: "";
+}
+
+.iczclose:before {
+  content: "";
+}
+
+.iczdsgn:before {
+  content: "";
+}
+
+body {
+  font-family: "Muli", sans serif;
+  color: #000;
+  font-size: 18px;
+}
+
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "Montserrat", sans serif;
+}
+
+.animate, #clients .clientslist img, #contacts > .col6.formcontainer .form form input, #contacts > .col6.formcontainer .form form textarea, #contacts > .col6.formcontainer .form form button, footer a {
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.textleft {
+  text-align: left;
+}
+
+.textcenter, body > header .textoverlay {
+  text-align: center;
+}
+
+.textright {
+  text-align: right;
+}
+
+.primary {
+  color: #E7194F;
+}
+
+.secondary, #services .serviceslist .iconz, footer a {
+  color: #00BEC5;
+}
+
+.graydark, #services .serviceslist p, #contacts > .col6.formcontainer .form form p, #contacts > .col6.formcontainer .form form input, #contacts > .col6.formcontainer .form form textarea {
+  color: #777;
+}
+
+.gray {
+  color: #CCC;
+}
+
+.graylight {
+  color: #F3F3F3;
+}
+
+.white, #contacts > .col6.formcontainer .form form button {
+  color: #FFF;
+}
+
+.imgfit {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gridrowfull {
+  width: 100%;
+}
+
+.gridrow {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.gridrowfull, .gridrow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gridrowfull .col1, .gridrow .col1 {
+  box-sizing: border-box;
+  width: 8.33333%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.gridrowfull .offset1, .gridrow .offset1 {
+  margin-left: 8.33333%;
+}
+
+.gridrowfull .col2, .gridrow .col2 {
+  box-sizing: border-box;
+  width: 16.66667%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.gridrowfull .offset2, .gridrow .offset2 {
+  margin-left: 16.66667%;
+}
+
+.gridrowfull .col3, .gridrow .col3 {
+  box-sizing: border-box;
+  width: 25%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.gridrowfull .offset3, .gridrow .offset3 {
+  margin-left: 25%;
+}
+
+.gridrowfull .col4, .gridrow .col4 {
+  box-sizing: border-box;
+  width: 33.33333%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.gridrowfull .offset4, .gridrow .offset4 {
+  margin-left: 33.33333%;
+}
+
+.gridrowfull .col5, .gridrow .col5 {
+  box-sizing: border-box;
+  width: 41.66667%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.gridrowfull .offset5, .gridrow .offset5 {
+  margin-left: 41.66667%;
+}
+
+.gridrowfull .col6, .gridrow .col6 {
+  box-sizing: border-box;
+  width: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.gridrowfull .offset6, .gridrow .offset6 {
+  margin-left: 50%;
+}
+
+.gridrowfull .col7, .gridrow .col7 {
+  box-sizing: border-box;
+  width: 58.33333%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.gridrowfull .offset7, .gridrow .offset7 {
+  margin-left: 58.33333%;
+}
+
+.gridrowfull .col8, .gridrow .col8 {
+  box-sizing: border-box;
+  width: 66.66667%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.gridrowfull .offset8, .gridrow .offset8 {
+  margin-left: 66.66667%;
+}
+
+.gridrowfull .col9, .gridrow .col9 {
+  box-sizing: border-box;
+  width: 75%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.gridrowfull .offset9, .gridrow .offset9 {
+  margin-left: 75%;
+}
+
+.gridrowfull .col10, .gridrow .col10 {
+  box-sizing: border-box;
+  width: 83.33333%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.gridrowfull .offset10, .gridrow .offset10 {
+  margin-left: 83.33333%;
+}
+
+.gridrowfull .col11, .gridrow .col11 {
+  box-sizing: border-box;
+  width: 91.66667%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.gridrowfull .offset11, .gridrow .offset11 {
+  margin-left: 91.66667%;
+}
+
+.gridrowfull .col12, .gridrow .col12 {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.gridrowfull .offset12, .gridrow .offset12 {
+  margin-left: 100%;
+}
+
+.gridrowfull.nogutter .col1, .gridrow.nogutter .col1 {
+  padding: 0;
+}
+
+.gridrowfull.nogutter .col2, .gridrow.nogutter .col2 {
+  padding: 0;
+}
+
+.gridrowfull.nogutter .col3, .gridrow.nogutter .col3 {
+  padding: 0;
+}
+
+.gridrowfull.nogutter .col4, .gridrow.nogutter .col4 {
+  padding: 0;
+}
+
+.gridrowfull.nogutter .col5, .gridrow.nogutter .col5 {
+  padding: 0;
+}
+
+.gridrowfull.nogutter .col6, .gridrow.nogutter .col6 {
+  padding: 0;
+}
+
+.gridrowfull.nogutter .col7, .gridrow.nogutter .col7 {
+  padding: 0;
+}
+
+.gridrowfull.nogutter .col8, .gridrow.nogutter .col8 {
+  padding: 0;
+}
+
+.gridrowfull.nogutter .col9, .gridrow.nogutter .col9 {
+  padding: 0;
+}
+
+.gridrowfull.nogutter .col10, .gridrow.nogutter .col10 {
+  padding: 0;
+}
+
+.gridrowfull.nogutter .col11, .gridrow.nogutter .col11 {
+  padding: 0;
+}
+
+.gridrowfull.nogutter .col12, .gridrow.nogutter .col12 {
+  padding: 0;
+}
+
+body > header {
+  height: 100vh;
+  background-image: url(../imgs/header.jpg);
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+body > header nav {
+  padding-top: 45px;
+}
+
+body > header nav a {
+  text-decoration: none;
+  line-height: 30px;
+  color: #000;
+}
+
+body > header nav a.logo {
+  font-size: 30px;
+  font-family: "Montserrat", sans serif;
+}
+
+body > header nav a.hamburgermenu {
+  font-size: 24px;
+}
+
+body > header .textoverlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* ISTO PERMITE QUE ESTE ELEMENTO, APESAR DEESTAR "ACIMA" DO LOGO E DO HAMBURGER, 
+            NÃO INTERFIRA NA INTERAÇÃO */
+  pointer-events: none;
+}
+
+body > header .textoverlay h1 {
+  font-size: 150px;
+}
+
+body > header .textoverlay h3 {
+  font-size: 60px;
+}
+
+body > header .textoverlay h1, body > header .textoverlay h3 {
+  margin: 0;
+}
+
+.aboutline1 {
+  margin-top: 120px;
+  position: relative;
+  z-index: 2;
+}
+
+.aboutline1 h4 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.aboutline1 h4 .iczarrow {
+  font-size: 28px;
+}
+
+.aboutline2 {
+  position: relative;
+  z-index: 1;
+  top: -120px;
+}
+
+#services h2 {
+  font-size: 90px;
+  margin: 0;
+}
+
+#services .serviceslist {
+  margin-top: 90px;
+}
+
+#services .serviceslist .iconz {
+  font-size: 64px;
+}
+
+#services .serviceslist h3 {
+  font-size: 24px;
+}
+
+.imggrid {
+  margin-top: 120px;
+}
+
+#clients {
+  margin-top: 120px;
+}
+
+#clients h2 {
+  font-size: 90px;
+  margin: 0;
+}
+
+#clients .clientslist {
+  margin-top: 60px;
+}
+
+#clients .clientslist img {
+  box-sizing: border-box;
+  padding: 15px;
+  opacity: 0.4;
+}
+
+#clients .clientslist img:hover {
+  opacity: 1;
+}
+
+#contacts {
+  margin-top: 90px;
+  background-color: #F3F3F3;
+  display: flex;
+}
+
+#contacts > .col6.formcontainer {
+  padding-right: 15px;
+}
+
+#contacts > .col6.formcontainer .form {
+  display: block;
+  float: right;
+  width: 570px;
+  padding-bottom: 60px;
+}
+
+#contacts > .col6.formcontainer .form form h2 {
+  font-size: 72px;
+  margin: 90px 0 0;
+}
+
+#contacts > .col6.formcontainer .form form p {
+  margin: 45px 0;
+}
+
+#contacts > .col6.formcontainer .form form input, #contacts > .col6.formcontainer .form form textarea {
+  box-sizing: border-box;
+  margin: 0 0 20px;
+  border: 2px solid #CCC;
+  width: 100%;
+  line-height: 22px;
+  padding: 17px 15px;
+}
+
+#contacts > .col6.formcontainer .form form input:focus, #contacts > .col6.formcontainer .form form textarea:focus {
+  border-color: #00BEC5;
+}
+
+#contacts > .col6.formcontainer .form form button {
+  margin: 0 0 20px;
+  background-color: #E7194F;
+  text-transform: uppercase;
+  line-height: 22px;
+  padding: 17px 30px;
+  border: none;
+  cursor: pointer;
+}
+
+#contacts > .col6.formcontainer .form form button:hover {
+  background-color: #00BEC5;
+}
+
+#contacts > .col6#map {
+  background-image: url(../imgs/map.JPG);
+  background-size: cover;
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+footer {
+  background-image: url(../imgs/bgfooter.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 60px;
+}
+
+footer h2 {
+  font-size: 72px;
+  margin: 0;
+}
+
+footer p {
+  margin: 30px 0;
+}
+
+footer a {
+  text-decoration: none;
+  font-size: 32px;
+  display: inline-block;
+  padding: 7.5px;
+}
+
+footer a:hover {
+  color: #E7194F;
+  text-decoration: none;
+}

@@ -1,0 +1,26 @@
+footer{
+    background-image: url(../imgs/bgfooter.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: $gridgutter * 2;
+    h2{
+        font-size: 72px;
+        margin: 0;
+    }
+    p{
+        margin: $gridgutter 0;
+    }
+    a{
+        @extend .animate;
+        @extend .secondary;
+        text-decoration: none;
+        font-size: 32px;
+        display: inline-block;
+        padding: $gridgutter / 4;
+        &:hover{
+            color: $primary;
+            text-decoration: none;
+        }
+    }
+}

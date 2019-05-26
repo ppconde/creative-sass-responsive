@@ -1,0 +1,67 @@
+.animate {
+  -webkit-transition: all $animationtime ease;
+  -moz-transition: all $animationtime ease;
+  -ms-transition: all $animationtime ease;
+  -o-transition: all $animationtime ease;
+  transition: all $animationtime ease;
+}
+
+.textleft {
+  text-align: left;
+}
+.textcenter {
+  text-align: center;
+}
+.textright {
+  text-align: right;
+}
+
+.primary {
+  color: $primary;
+}
+.secondary {
+  color: $secondary;
+}
+.graydark {
+  color: $graydark;
+}
+.gray {
+  color: $gray;
+}
+.graylight {
+  color: $graylight;
+}
+.white {
+  color: $white;
+}
+
+.imgfit {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.videowrapper {
+  position: relative;
+  padding-bottom: percentage(360/640);
+  height: 0;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.toogleDisplay {
+  @each $screenName, $screenSize in $gridcolumns {
+    @include dynamicMQuery($gridwidth, $screenName) {
+      @if $screenName == "desktop" {
+        display: block;
+      } @else {
+        display: none;
+      }
+    }
+  }
+}

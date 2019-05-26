@@ -1,0 +1,39 @@
+.gridrowfull {
+  width: 100%;
+}
+.gridrow {
+  @each $screenName, $screenSize in $gridcolumns {
+    @include dynamicMQuery($gridwidth, $screenName) {
+      width: map-get($gridwidth, $screenName);
+    }
+  }
+  margin: 0 auto;
+}
+
+.gridrowfull,
+.gridrow {
+  display: flex;
+  flex-wrap: wrap;
+  @each $screenName, $screenSize in $gridcolumns {
+    @for $i from 1 through $screenSize {
+      @include dynamicMQuery($gridwidth, $screenName) {
+        .col-#{$screenName}-#{$i} {
+          box-sizing: border-box;
+          width: percentage($i/$screenSize);
+          padding-left: map-get($gridgutter, $screenName) / 2;
+          padding-right: map-get($gridgutter, $screenName) / 2;
+        }
+        .offset-#{$screenName}-#{$i} {
+          margin-left: percentage($i/$screenSize);
+        }
+      }
+      &.nogutter-#{$screenName} {
+        @for $i from 1 through $screenSize {
+          .col-#{$screenName}-#{$i} {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}

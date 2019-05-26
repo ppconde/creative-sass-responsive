@@ -1,0 +1,43 @@
+footer {
+  @each $screenName, $screenSize in $gridcolumns {
+    @include dynamicMQuery($gridwidth, $screenName) {
+      background-image: url(#{map-get($footerImagePath, $screenName)});
+    }
+  }
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  @each $screenName, $screenSize in $gridcolumns {
+    @include dynamicMQuery($gridwidth, $screenName) {
+      padding: map-get($gridgutter, $screenName) * 2;
+    }
+  }
+  h2 {
+    font-size: 72px;
+    margin: 0;
+  }
+  p {
+    @each $screenName, $screenSize in $gridcolumns {
+      @include dynamicMQuery($gridwidth, $screenName) {
+        margin: map-get($gridgutter, $screenName) 0;
+      }
+    }
+  }
+  a {
+    @extend .animate;
+    @extend .secondary;
+    text-decoration: none;
+    font-size: 32px;
+    display: inline-block;
+    @each $screenName, $screenSize in $gridcolumns {
+      @include dynamicMQuery($gridwidth, $screenName) {
+        padding: map-get($gridgutter, $screenName) / 4;
+      }
+    }
+    &:hover {
+      color: $primary;
+      text-decoration: none;
+    }
+  }
+}

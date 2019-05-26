@@ -1,0 +1,30 @@
+.gridrowfull{
+    width: 100%;
+}
+.gridrow{
+    width: $gridwidth;
+    margin: 0 auto;
+}
+
+.gridrowfull, .gridrow{
+    display: flex;
+    flex-wrap: wrap;
+    @for $i from 1 through $gridcolumns {
+        .col#{$i} {
+            box-sizing: border-box;
+            width: percentage($i/$gridcolumns);
+            padding-left: $gridgutter / 2;
+            padding-right: $gridgutter / 2;
+        }
+        .offset#{$i} {
+            margin-left: percentage($i/$gridcolumns);
+        }
+    }
+    &.nogutter{
+        @for $i from 1 through $gridcolumns {
+            .col#{$i} {
+                padding: 0;
+            }
+        }
+    }
+}

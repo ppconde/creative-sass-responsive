@@ -1,0 +1,87 @@
+$titlesfont: "Montserrat";
+$titlesfontweights: "700";
+$bodyfont: "Muli";
+$bodyfontweights: "400";
+
+$primary: #e7194f;
+$secondary: #00bec5;
+$graydark: #777;
+$gray: #ccc;
+$graylight: #f3f3f3;
+$white: #fff;
+$black: #000;
+
+$animationtime: 0.4s;
+
+$gridcolumns: (
+  "mobile": 4,
+  "tablet": 6,
+  "desktop": 12
+);
+$gridgutter: (
+  "mobile": 15px,
+  "tablet": 30px,
+  "desktop": 30px
+);
+//mobile gridwidth has a max-width query associated to it
+//the remaining have a min-width query
+$gridwidth: (
+  "mobile": 320px,
+  "tablet": 768px,
+  "desktop": 1200px
+);
+
+$logoFontSize: (
+  "mobile": 32px,
+  "tablet": 32px,
+  "desktop": 32px
+);
+
+$aboutLine2Constant: (
+  "mobile": -4,
+  "tablet": -2,
+  "desktop": 8
+);
+
+$servicesMargin: (
+  "mobile": 100px,
+  "tablet": 100px,
+  "desktop": 0
+);
+
+$titleFontSize: (
+  "mobile": 50px,
+  "tablet": 60px,
+  "desktop": 72px
+);
+
+$headerImagePath: (
+  "mobile": "../imgs/header.jpg",
+  "tablet": "../imgs/bgfooter.jpg",
+  "desktop": "../imgs/header.jpg"
+);
+
+$footerImagePath: (
+  "mobile": "../imgs/bgfooter.jpg",
+  "tablet": "../imgs/header.jpg",
+  "desktop": "../imgs/bgfooter.jpg"
+);
+
+$neg: -1;
+
+$formlineheight: 22px;
+$formborderwidth: 2px;
+
+$icomoon-font-family: "iconz" !default;
+$icomoon-font-path: "../fonts" !default;
+$iczarrow: "\e900";
+$iczbehance: "\e901";
+$iczdev: "\e902";
+$iczdribbble: "\e903";
+$iczfacebook: "\e904";
+$iczinstagram: "\e905";
+$iczmkt: "\e906";
+$icztwitter: "\e907";
+$iczhamburger: "\e908";
+$iczclose: "\e909";
+$iczdsgn: "\e90a";
